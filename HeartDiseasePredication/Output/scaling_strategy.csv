@@ -1,0 +1,13 @@
+Feature,Scaler,Recommendation,Clinical Reason,Skewness,Outliers %,Range
+slope_of_peak_exercise_st_segment,MinMaxScaler,MinMaxScaler,"Ordinal feature (1=upsloping, 2=flat, 3=downsloping)",0.67,0.0%,1.0-3.0
+resting_blood_pressure,StandardScaler,StandardScaler,"Clinical thresholds important (120/80, 140/90)",0.66,3.3%,94.0-180.0
+chest_pain_type,No scaling,No Scaling (Categorical),Actually categorical despite being numeric,-0.85,7.2%,1.0-4.0
+num_major_vessels,MinMaxScaler,MinMaxScaler,"Integer counts, bounded range",1.17,7.8%,0.0-3.0
+fasting_blood_sugar_gt_120_mg_per_dl,RobustScaler,RobustScaler,General numerical feature,1.86,16.1%,0.0-1.0
+resting_ekg_results,No scaling,No Scaling (Categorical),Categorical feature encoded as numbers,-0.10,0.0%,0.0-2.0
+serum_cholesterol_mg_per_dl,StandardScaler,StandardScaler,"Often has outliers, clinical thresholds at 200, 240",1.27,1.1%,126.0-564.0
+oldpeak_eq_st_depression,RobustScaler,RobustScaler,"Key diagnostic feature, often has extreme values",1.51,2.2%,0.0-6.2
+sex,StandardScaler,StandardScaler,General numerical feature,-0.82,0.0%,0.0-1.0
+age,StandardScaler,StandardScaler,"Interpretable in original scale, bounded",-0.20,0.0%,29.0-77.0
+max_heart_rate_achieved,StandardScaler,StandardScaler,"Formula: 220 - age, so related to age",-0.39,0.0%,96.0-202.0
+exercise_induced_angina,StandardScaler,StandardScaler,General numerical feature,0.79,0.0%,0.0-1.0
